@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+
+# Logs and debug
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment (keep a committed template)
+.env
+.env.*
+!.env.example
+
+# OS and editors
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# TypeScript
+*.tsbuildinfo
+
+# Build / bundling
+dist/
+bundle/
+
+# Hardhat — compilation and cache
+artifacts/
+cache/
+
+# Hardhat — typechain (adjust if you commit generated types)
+types/
+
+# Hardhat Ignition — local deployment state (commit only if your team tracks these)
+ignition/deployments/
+
+# Testing and coverage
+coverage/
+coverage.json
+lcov.info
+.gas-snapshot
+snapshots/
+
+# Optional: Cursor / Claude local overrides (uncomment if you do not want them tracked)
+# .claude/settings.local.json

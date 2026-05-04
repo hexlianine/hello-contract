@@ -1,0 +1,22 @@
+{
+  "name": "hello-contract",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.10",
+    "@types/node": "^22.19.17",
+    "ethers": "^6.16.0",
+    "hardhat": "^3.4.3",
+    "typescript": "~5.8.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
