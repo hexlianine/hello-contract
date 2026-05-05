@@ -4,7 +4,7 @@ created: 2026-05-04
 status: draft
 ---
 
-# Hardhat 2 to Hardhat 3 Migration
+# Hardhat 2 to 3
 
 **Breaking API changes between Hardhat 2 and Hardhat 3 that affect deploy scripts and plugin configuration.**
 
@@ -65,20 +65,20 @@ Ethers v6 removed the `.address` property in favor of the async `.getAddress()` 
 ## Troubleshooting Checklist
 
 - <span style="color: orange;">**Symptom:**</span> `ethers.getContractFactory is not a function`  
-  **Cause:** Hardhat 2 import style in Hardhat 3  
-  **Fix:** Use `const { ethers } = await network.create()`
+  - **Cause:** Hardhat 2 import style in Hardhat 3  
+  - **Fix:** Use `const { ethers } = await network.create()`
 
 - <span style="color: orange;">**Symptom:**</span> `Cannot read properties of undefined (reading 'getContractFactory')`  
-  **Cause:** Plugin not registered in `plugins` array  
-  **Fix:** Add `plugins: [hardhatEthers]` to config
+  - **Cause:** Plugin not registered in `plugins` array  
+  - **Fix:** Add `plugins: [hardhatEthers]` to config
 
 - <span style="color: orange;">**Symptom:**</span> `contract.address` is `undefined`  
-  **Cause:** Ethers v6 removed `.address`  
-  **Fix:** Use `await contract.getAddress()`
+  - **Cause:** Ethers v6 removed `.address`  
+  - **Fix:** Use `await contract.getAddress()`
 
 - <span style="color: orange;">**Symptom:**</span> `network.connect()` deprecation warning  
-  **Cause:** `connect()` is deprecated in Hardhat 3  
-  **Fix:** Use `network.create()` instead
+  - **Cause:** `connect()` is deprecated in Hardhat 3  
+  - **Fix:** Use `network.create()` instead
 
 ## Full Script Comparison
 

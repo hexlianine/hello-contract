@@ -4,7 +4,7 @@ created: 2026-05-05
 status: draft
 ---
 
-# Hardhat 3 Interact Script (Troubleshooting)
+# Troubleshooting
 
 **Common pitfalls when writing a standalone contract interaction script with Hardhat 3, Ethers v6, and TypeScript 5.8.** 
 
@@ -31,6 +31,25 @@ When running via `npx tsx scripts/interact.ts` (not through `hardhat run`), envi
 TypeScript 5.8+ and Node 22 require `with { type: "json" }` instead of the deprecated `assert { type: "json" }` for JSON imports.
 
 The `module` and `moduleResolution` in `tsconfig.json` must be set to `nodenext` (not `node16`) to support import attributes.
+
+> [!info] **What's the Difference Between `nodenext` and `node16` in tsconfig?**
+>
+> **`module: "node16"`** and **`module: "nodenext"`** both enable Node.js module resolution compatible with ESM (`.js`, `.mjs`) and CommonJS (`.cjs`). However:
+>
+> - **`node16`** mirrors Node 16's import system, supports `assert { type: "json" }` for JSON imports, but **does not** support the newer `with { type: "json" }` syntax required by TypeScript 5.8+ and Node 22+.
+> - **`nodenext`** supports everything `node16` does **plus** the modern [import attributes](https://github.com/tc39/proposal-import-attributes) (`with { type: "json" }`). It's **required** for JSON/asset imports using this new syntax in latest Node/TS.
+>
+> |       Setting       | `assert { type: "json" }` | `with { type: "json" }` | Best for                        |
+> |---------------------|:-------------------------:|:-----------------------:|:-------------------------------:|
+> |      `node16`       |            ✅            |          ❌             | Legacy/older TS + Node setups   |
+> |     `nodenext`      |            ✅            |          ✅             | Latest TS (5.8+), Node 22+      |
+>
+> **Bottom line:** Use `nodenext` for TypeScript 5.8+ with Node 22+ if you want to import JSON or assets with `with { type: "json" }`.  
+>  
+> - [TypeScript Docs: Module Resolution](https://www.typescriptlang.org/docs/handbook/module-resolution.html)  
+> - [TS 5.8 Release Notes — Import Attributes](https://devblogs.microsoft.com/typescript/announcing-typescript-5-8/#import-attributes)
+
+
 
 ### 4. Contract Address Format
 
