@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "^4.0.10",
+    "@nomicfoundation/hardhat-verify": "^3.0.16",
     "@types/node": "^22.19.17",
     "ethers": "^6.16.0",
     "hardhat": "^3.4.3",
