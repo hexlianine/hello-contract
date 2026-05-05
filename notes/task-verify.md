@@ -107,6 +107,7 @@ If verifying a proxy, you may need to verify the implementation contract separat
 ## References
 
 - [Hello World Smart Contract for Beginners - Goerli](https://ethereum.org/developers/tutorials/hello-world-smart-contract-fullstack/)
+- [Etherscan - Verify with Hardhat](https://docs.etherscan.io/contract-verification/verify-with-hardhat)
 - [Lifecycle of the components of a Hardhat 3 plugin](https://hardhat.org/docs/plugin-development/explanations/lifecycle)
 - [Hardhat 3 Plugin - hardhat-verify](https://hardhat.org/docs/plugins/hardhat-verify)
 - [GitHub Issue #2287 — "Already Verified" should not crash scripts](https://github.com/NomicFoundation/hardhat/issues/2287)
