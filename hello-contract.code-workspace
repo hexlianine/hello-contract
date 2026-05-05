@@ -1,0 +1,27 @@
+{
+  "folders": [
+    {
+      "name": "contract",
+      "path": "."
+    },
+    {
+      "name": "app",
+      "path": "app"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/artifacts": true,
+      "**/cache": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/artifacts": true,
+      "**/cache": true,
+      "**/package-lock.json": true
+    },
+    "solidity.compileUsingRemoteVersion": "latest",
+    "editor.formatOnSave": true
+  }
+}
