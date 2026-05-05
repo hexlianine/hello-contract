@@ -123,6 +123,7 @@ main()
     });
 ```
 
-## Related Concepts
+## References
 
-- [[hardhat3-deploy-script-fix]]
+- [Hello World Smart Contract for Beginners - Goerli](https://ethereum.org/developers/tutorials/hello-world-smart-contract-fullstack/)
+- [Alchemy](https://www.alchemy.com/)

@@ -126,6 +126,8 @@ async function main() {
 })();
 ```
 
-## Related Concepts
+## References
 
-- [[hardhat-ethers-plugin]]
+- [Hello World Smart Contract for Beginners](https://ethereum.org/developers/tutorials/hello-world-smart-contract)
+- [Hardhat 3 Migration Guide](https://hardhat.org/hardhat-runner/docs/migrate-from-v2)
+- [Hardhat 3 Plugin API](https://hardhat.org/hardhat-runner/docs/plugins)
