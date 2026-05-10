@@ -1,9 +1,9 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { HelloWorld } from './_components/hello';
 
-const HelloWorld = () => {
+export default function Page() {
   const [message, setMessage] = useState('No connection to the network.');
 
   useEffect(() => {
@@ -15,14 +15,8 @@ const HelloWorld = () => {
   }, []);
 
   return (
-    <div id="container">
-      <Image src="/next.svg" alt="React logo" width="120" height="17" />
-
-      <p>{message}</p>
-
-      <h2 style={{ paddingTop: '18px' }}>New Message:</h2>
+    <div id="container" className="m-8">
+      <HelloWorld message={message} />
     </div>
   );
-};
-
-export default HelloWorld;
+}
